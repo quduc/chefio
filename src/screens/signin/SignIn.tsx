@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/core';
 import { CustomBackground } from 'components/CustomBackground';
 import { CustomButton } from 'components/CustomButton';
 import { CustomInput } from 'components/CustomInput';
@@ -7,6 +8,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 export const SignIn = () => {
+    const navigation = useNavigation();
     return (
         <CustomBackground>
             <View style={styles.title}>
@@ -24,6 +26,7 @@ export const SignIn = () => {
                 />
                 <Text p2 text="Forgot password?" style={{ color: colors.mainText, marginTop: 10, marginBottom: 60, textAlign: 'right' }} />
                 <CustomButton type="primary" title="Login" />
+                <Text p2 text="Dont's have any account? Sign Up" onPress={() => navigation.navigate("SignUp")} style={{ color: colors.black, marginTop: 10, marginBottom: 60, textAlign: 'center' }} />
             </View>
         </CustomBackground>
     )

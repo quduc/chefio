@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Onboarding } from "screens/onboarding/Onboarding";
 import { SignIn } from "screens/signin/SignIn";
 import { NavigationContainer } from '@react-navigation/native';
+import { SignUp } from 'screens/signup/SignUp';
 const Stack = createStackNavigator();
 
 export const MainStack = () => {
@@ -10,16 +11,21 @@ export const MainStack = () => {
         <NavigationContainer>
         <Stack.Navigator
             initialRouteName="SignIn"
+            screenOptions={{
+                headerShown:false
+            }}
         >
             <Stack.Screen
                 name="Onboarding"
                 component={Onboarding}
-                options={{ headerShown: false }}
             />
             <Stack.Screen 
                 name="SignIn"
                 component={SignIn}
-                options={{ headerShown: false }}
+            />
+             <Stack.Screen 
+                name="SignUp"
+                component={SignUp}
             />
         </Stack.Navigator>
         </NavigationContainer>

@@ -10,6 +10,7 @@ interface Props {
     s?: boolean;
     style?: TextStyle;
     text: any;
+    onPress?: () => void;
 
 }
 export const CustomText: FC<Props> = (props) => {
@@ -22,6 +23,7 @@ export const CustomText: FC<Props> = (props) => {
     if (props.s) style = styles.s;
     return (
         <Text
+            
             {...props}
             style={[style, {
                 ...props.style

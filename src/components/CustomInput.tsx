@@ -9,16 +9,15 @@ interface Props extends TextInputProps {
     heightInput?: string | number,
     refInput?: LegacyRef<TextInput>,
     icon?: string,
-    value?: string;
 }
 export const CustomInput: FC<Props> = (props) => {
-    const { style, heightInput, refInput, icon, value } = props;
+    const { style, heightInput, refInput, icon } = props;
     return (
         <View style={[style]}>
             {
                 icon ? (
                     <View style={styles.row}>
-                        <Icon name={icon} color={colors.black} size={20} style={{ marginRight:10,alignItems: 'center', justifyContent: 'center' }} />
+                        <Icon name={icon} color={colors.black} size={20} style={{ marginRight: 10, alignItems: 'center', justifyContent: 'center' }} />
                         <TextInput
                             {...props}
                             ref={refInput}
@@ -40,7 +39,6 @@ export const CustomInput: FC<Props> = (props) => {
                     />
                 )
             }
-
         </View>
     )
 }
@@ -54,8 +52,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         width: '100%',
         height: 56,
-        alignItems:'center',
-        marginVertical:10
+        alignItems: 'center',
+        marginVertical: 10
     },
     title_container: {
         flexDirection: 'row',
