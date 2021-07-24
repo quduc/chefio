@@ -1,4 +1,6 @@
 import { CustomBackground } from 'components/CustomBackground';
+import { CustomButton } from 'components/CustomButton';
+import { CustomInput } from 'components/CustomInput';
 import { CustomText as Text } from 'components/CustomText';
 import { colors } from 'constants/colors';
 import React from 'react';
@@ -12,7 +14,16 @@ export const SignIn = () => {
                 <Text p2 text="Please enter your account here" style={{ color: colors.secondaryText }} />
             </View>
             <View style={styles.form}>
-
+                <CustomInput
+                    icon="user"
+                    placeholder="Email or phone number"
+                />
+                <CustomInput
+                    icon="lock"
+                    placeholder="Password"
+                />
+                <Text p2 text="Forgot password?" style={{ color: colors.mainText, marginTop: 10, marginBottom: 60, textAlign: 'right' }} />
+                <CustomButton type="primary" title="Login" />
             </View>
         </CustomBackground>
     )
@@ -23,8 +34,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    form : {
-        marginTop:20,
-        marginBottom:60
+    form: {
+        marginTop: 20,
+        marginBottom: 60
     }
 })
