@@ -2,32 +2,39 @@ import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { Onboarding } from "screens/onboarding/Onboarding";
 import { SignIn } from "screens/signin/SignIn";
-import { NavigationContainer } from '@react-navigation/native';
 import { SignUp } from 'screens/signup/SignUp';
+import { MainBottomTab } from './MainBottomTab';
+import { RecipeDetail } from 'screens/recipedetail/RecipeDetail';
 const Stack = createStackNavigator();
 
 export const MainStack = () => {
     return (
-        <NavigationContainer>
         <Stack.Navigator
-            initialRouteName="SignIn"
+            initialRouteName="MainBottomTab"
             screenOptions={{
-                headerShown:false
+                headerShown: false
             }}
         >
+            <Stack.Screen
+                name="MainBottomTab"
+                component={MainBottomTab}
+            />
             <Stack.Screen
                 name="Onboarding"
                 component={Onboarding}
             />
-            <Stack.Screen 
+            <Stack.Screen
                 name="SignIn"
                 component={SignIn}
             />
-             <Stack.Screen 
+            <Stack.Screen
                 name="SignUp"
                 component={SignUp}
             />
+            <Stack.Screen
+                name="RecipeDetail"
+                component={RecipeDetail}
+            />
         </Stack.Navigator>
-        </NavigationContainer>
     )
 }

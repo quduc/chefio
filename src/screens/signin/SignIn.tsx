@@ -25,7 +25,7 @@ export const SignIn = () => {
                     placeholder="Password"
                 />
                 <Text p2 text="Forgot password?" style={{ color: colors.mainText, marginTop: 10, marginBottom: 60, textAlign: 'right' }} />
-                <CustomButton type="primary" title="Login" />
+                <CustomButton type="primary" title="Login" onPress={() => navigation.navigate("Home")} />
                 <Text p2 text="Dont's have any account? Sign Up" onPress={() => navigation.navigate("SignUp")} style={{ color: colors.black, marginTop: 10, marginBottom: 60, textAlign: 'center' }} />
             </View>
         </CustomBackground>

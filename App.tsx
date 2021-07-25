@@ -10,13 +10,13 @@
 
 import React from 'react';
 import { StatusBar } from 'react-native';
-import { MainStack } from 'routes/MainStack';
+import { RootStack } from 'routes/RootStack';
 
 
 const App = () => {
   return (
     <>
-      <MainStack />
+      <RootStack />
       <StatusBar barStyle={'light-content'} />
     </>
   )
