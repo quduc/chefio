@@ -15,7 +15,7 @@ export const RecipeItem: FC<Props> = ({ item }) => {
     const navigation = useNavigation();
     return (
         <TouchableOpacity
-            onPress={() => navigation.navigate("RecipeDetail", { item: item })}
+            onPress={() => navigation.navigate("RecipeDetail", { recipe: item })}
             style={styles.recipe}>
             <View style={styles.row}>
                 <FastImage
@@ -34,7 +34,7 @@ export const RecipeItem: FC<Props> = ({ item }) => {
                     resizeMode={FastImage.resizeMode.cover}
                     style={styles.foodImage}
                     source={{
-                        uri: item.food_image,
+                        uri: item.food_image[1],
                         priority: FastImage.priority.normal,
                     }}
                 />

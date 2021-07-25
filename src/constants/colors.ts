@@ -10,6 +10,7 @@ export interface ColorMap {
     form : string;
     white : string;
     black : string;
+    title: string;
 }
 export const colors : ColorMap = {
     background : '#FFFFFF',
@@ -20,7 +21,8 @@ export const colors : ColorMap = {
     outline : '#D0DBEA',
     form : '#F4F5F7',
     black : '#000000',
-    white : '#FFFFFF'
+    white : '#FFFFFF',
+    title: '#3E5481'
 
 
 }

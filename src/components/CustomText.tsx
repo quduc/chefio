@@ -11,7 +11,7 @@ interface Props {
     style?: TextStyle;
     text: any;
     onPress?: () => void;
-
+    numberOfLines?: number;
 }
 export const CustomText: FC<Props> = (props) => {
     let style = {};
@@ -25,6 +25,7 @@ export const CustomText: FC<Props> = (props) => {
         <Text
             
             {...props}
+            numberOfLines={props.numberOfLines ? props.numberOfLines : undefined}
             style={[style, {
                 ...props.style
             }]}>{props.text}

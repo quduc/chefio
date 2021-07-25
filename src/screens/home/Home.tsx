@@ -34,7 +34,12 @@ const recipes = [
         "food_name": "Pancake",
         "category": "Food",
         "estimated_time": "> 60m",
-        "food_image": "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        "food_image": [
+            "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262907/pexels-photo-7262907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262912/pexels-photo-7262912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ],
+
     },
     {
         "id": 2,
@@ -43,7 +48,11 @@ const recipes = [
         "food_name": "Pancake",
         "category": "Food",
         "estimated_time": "> 60m",
-        "food_image": "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        "food_image": [
+            "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262907/pexels-photo-7262907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262912/pexels-photo-7262912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ],
     },
     {
         "id": 3,
@@ -52,7 +61,11 @@ const recipes = [
         "food_name": "Pancake",
         "category": "Food",
         "estimated_time": "> 60m",
-        "food_image": "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        "food_image": [
+            "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262907/pexels-photo-7262907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262912/pexels-photo-7262912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ],
     },
     {
         "id": 4,
@@ -61,7 +74,11 @@ const recipes = [
         "food_name": "Pancake",
         "category": "Food",
         "estimated_time": "> 60m",
-        "food_image": "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        "food_image": [
+            "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262907/pexels-photo-7262907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262912/pexels-photo-7262912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ],
     },
     {
         "id": 5,
@@ -70,7 +87,11 @@ const recipes = [
         "food_name": "Pancake",
         "category": "Food",
         "estimated_time": "> 60m",
-        "food_image": "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        "food_image": [
+            "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262907/pexels-photo-7262907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262912/pexels-photo-7262912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ],
     },
     {
         "id": 6,
@@ -79,7 +100,11 @@ const recipes = [
         "food_name": "Pancake",
         "category": "Food",
         "estimated_time": "> 60m",
-        "food_image": "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        "food_image": [
+            "https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262907/pexels-photo-7262907.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/7262912/pexels-photo-7262912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        ],
     }
 ]
 export const Home = () => {
@@ -144,6 +169,6 @@ const styles = StyleSheet.create({
     },
     recipeList: {
         marginTop: 10,
-        flex:1
+        flex: 1
     }
 })
