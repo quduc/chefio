@@ -8,6 +8,7 @@ import FastImage from 'react-native-fast-image';
 import { CustomText } from 'components/CustomText';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { CircleStep } from 'components/CircleStep';
 LogBox.ignoreLogs(['Calling'])
 interface Props {
     route: RouteProp<{ params: { recipe: any } }, 'params'>
@@ -79,9 +80,7 @@ export const RecipeDetail: FC<Props> = ({ route: { params: { recipe } } }) => {
     const renderStepItem = ({ item }: any) => {
         return (
             <View style={{ flexDirection: 'row', marginBottom: 10, justifyContent: 'space-between' }}>
-                <View style={styles.circleStep}>
-                    <CustomText s text={item.id} style={{ color: colors.white }} />
-                </View>
+                <CircleStep step={item.id} />
                 <View style={{ width: constants.widthDevice - 80, alignItems: 'flex-start' }}>
                     <CustomText
                         p2
@@ -115,7 +114,7 @@ export const RecipeDetail: FC<Props> = ({ route: { params: { recipe } } }) => {
                     renderItem={renderItem}
                 />
                 <View style={styles.btnBack}>
-                    <TouchableOpacity onPress={()=>navigation.goBack()}>
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Icon name="angle-left" size={36} color={colors.white} />
                     </TouchableOpacity>
                 </View>
@@ -211,8 +210,7 @@ const styles = StyleSheet.create({
         width: 56,
         height: 56,
         borderRadius: 32,
-        backgroundColor: '#FFFFFF',
-        opacity: 0.8,
+        backgroundColor: '#FFFFFF90',
         alignItems: 'center',
         justifyContent: 'center'
     },

@@ -9,7 +9,7 @@ interface Props extends ViewProps {
     onPress?: () => void;
     styleTitle?: TextStyle;
     rightIcon?: ReactNode
-    type: 'primary' | 'secondary' | 'primary-outline' | 'secondary-outline';
+    type: 'primary' | 'secondary' | 'primary_outline' | 'secondary_outline';
     disabled?: boolean | undefined
 }
 export const CustomButton: FC<Props> = (props) => {
@@ -28,19 +28,19 @@ export const CustomButton: FC<Props> = (props) => {
             buttonColors = colors.outline
             borderColor = colors.outline;
             break;
-        case 'primary-outline':
+        case 'primary_outline':
             textColor = colors.primary;
             buttonColors = colors.white;
             borderColor = colors.primary;
             break;
-        case 'secondary-outline':
+        case 'secondary_outline':
             textColor = colors.black;
             buttonColors = colors.white;
             borderColor = colors.outline;
             break;
     }
     return (
-        <TouchableOpacity  style={[styles.button, { backgroundColor: buttonColors, borderColor: borderColor, }]} onPress={onPress} disabled={props?.disabled}>
+        <TouchableOpacity style={[styles.button, { backgroundColor: buttonColors, borderColor: borderColor }]} onPress={onPress} disabled={props?.disabled}>
             <CustomText h3 text={title} style={{ color: textColor }} />
         </TouchableOpacity>
     )
@@ -48,10 +48,12 @@ export const CustomButton: FC<Props> = (props) => {
 const styles = StyleSheet.create({
     button: {
         height: 56,
-        borderRadius:32,
+        borderRadius: 32,
         alignItems: 'center',
         justifyContent: 'center',
         alignContent: 'center',
         width: '100%',
+        marginTop: 10,
+        borderWidth: 1
     },
 })

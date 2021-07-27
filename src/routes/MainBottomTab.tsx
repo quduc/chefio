@@ -4,6 +4,8 @@ import { Home } from '../screens/home/Home';
 import { Image, StyleSheet } from 'react-native';
 import { colors } from 'constants/colors';
 import { Profile } from 'screens/profile/Profile';
+import { UploadStack } from './UploadStack';
+import { Notification } from 'screens/notification/Notification';
 const Tab = createBottomTabNavigator()
 interface Props { };
 export const MainBottomTab: FC<Props> = (props) => {
@@ -11,6 +13,7 @@ export const MainBottomTab: FC<Props> = (props) => {
         <Tab.Navigator
             initialRouteName="Home"
             tabBarOptions={{
+                keyboardHidesTabBar: true,
                 labelStyle: { fontSize: 10, fontWeight: 'bold', paddingBottom: 4 },
                 style: { backgroundColor: colors.white, borderTopColor: 'transparent', height: 56, paddingTop: 8 },
                 inactiveTintColor: colors.secondaryText,
@@ -32,7 +35,7 @@ export const MainBottomTab: FC<Props> = (props) => {
                 }} />
             <Tab.Screen
                 name="Upload"
-                component={Home}
+                component={UploadStack}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
@@ -45,7 +48,7 @@ export const MainBottomTab: FC<Props> = (props) => {
                 }} />
             <Tab.Screen
                 name="Notification"
-                component={Home}
+                component={Notification}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image

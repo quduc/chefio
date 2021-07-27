@@ -157,8 +157,8 @@ const styles = StyleSheet.create({
     cateTag: {
         alignItems: 'center',
         justifyContent: 'center',
-        paddingHorizontal: 15,
-        borderRadius: 20,
+        paddingHorizontal: 20,
+        borderRadius: 32,
         height: 48,
         backgroundColor: colors.primary,
         marginRight: 10
