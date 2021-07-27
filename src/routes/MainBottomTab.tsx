@@ -50,6 +50,7 @@ export const MainBottomTab: FC<Props> = (props) => {
                 name="Notification"
                 component={Notification}
                 options={{
+                    
                     tabBarIcon: ({ focused }) => (
                         <Image
                             source={require('../resources/images/notification.png')}

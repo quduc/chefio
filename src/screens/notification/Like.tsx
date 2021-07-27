@@ -7,7 +7,7 @@ import { Image, StyleSheet, View } from 'react-native';
 interface Props {
     noti: any;
 }
-export const Follow: FC<Props> = ({ noti }) => {
+export const Like: FC<Props> = ({ noti }) => {
     return (
         <View style={styles.container}>
             <View style={styles.row}>
@@ -21,9 +21,11 @@ export const Follow: FC<Props> = ({ noti }) => {
                     <CustomText s text={`${noti.content} • ${noti.created_at}`} style={{ color: colors.secondaryText }} />
                 </View>
             </View>
-            <View style={{ width: 100 }}>
-                <CustomButton title="Follow" type="primary" />
-            </View>
+            <Image
+                source={{ uri: noti.noti_image }}
+                resizeMode="cover"
+                style={{ width: 100, height: 56, borderRadius: 8 }}
+            />
         </View>
     )
 }
@@ -31,7 +33,8 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         marginVertical: 10,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        alignItems:'center'
     },
     row: {
         flexDirection: 'row',
