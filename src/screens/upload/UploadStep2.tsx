@@ -82,8 +82,7 @@ export const UploadStep2: FC<Props> = (prop) => {
                     type="secondary_outline"
                 />
             </View>
-            <View style={{ height: 20 }} />
-            <CustomeDivider />
+            <CustomeDivider style={{ marginTop: 20 }} />
             <View style={styles.section}>
                 <CustomText h2 text="Steps" style={styles.sectionTitle} />
                 {renderStepItem()}

@@ -17,18 +17,19 @@ export const RecipeItem: FC<Props> = ({ item }) => {
         <TouchableOpacity
             onPress={() => navigation.navigate("RecipeDetail", { recipe: item })}
             style={styles.recipe}>
-            <View style={styles.row}>
-                <FastImage
-                    resizeMode={FastImage.resizeMode.cover}
-                    style={styles.userImage}
-                    source={{
-                        uri: item.user_image,
-                        priority: FastImage.priority.normal,
-                    }}
-
-                />
-                <CustomText s text={item.user_name} style={{ color: colors.mainText, marginLeft: 20 }} />
-            </View>
+            {item.user_name && (
+                <View style={styles.row}>
+                    <FastImage
+                        resizeMode={FastImage.resizeMode.cover}
+                        style={styles.userImage}
+                        source={{
+                            uri: item.user_image,
+                            priority: FastImage.priority.normal,
+                        }}
+                    />
+                    <CustomText s text={item.user_name} style={{ color: colors.mainText, marginLeft: 20 }} />
+                </View>
+            )}
             <View style={styles.row}>
                 <FastImage
                     resizeMode={FastImage.resizeMode.cover}
